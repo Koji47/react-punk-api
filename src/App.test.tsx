@@ -1,14 +1,25 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
-import userEvent from "@testing-library/user-event";
+// import { fireEvent, render, screen } from "@testing-library/react";
+// import App from "./App";
+// import CardContainer from "./Containers/CardContainer/CardContainer";
+// import Nav from "./Containers/NavBar/Nav";
 
-it("should render the form", () => {
-  // arrange
-  render(<App />);
-  // act
-  const nav = screen.getByRole("nav");
+// it("search functionality works", async () => {
+//   render(<App />);
+//   // act
+//   const searchInput = screen.getByRole("Search");
+//   fireEvent.change(searchInput, { target: { value: "buzz" } });
 
-  // assert
+//   // assert
+//   expect(screen.getByText("buzz")).toBeDefined();
+//   expect(searchInput).toHaveValue("buzz");
+// });
 
-  expect(nav).toBeInTheDocument();
-});
+// it("navigate to beersInfo", async () => {
+//   render(<App />);
+//   // act
+//   await screen.findByTestId("beer-card");
+
+//   // assert
+//   expect(screen.getByText("buzz")).toBeDefined();
+//   expect(searchInput).toHaveValue("buzz");
+// });

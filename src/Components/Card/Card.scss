@@ -1,5 +1,11 @@
 .card {
-  background-color: #81b622;
+  background: rgb(242, 142, 28);
+  background: linear-gradient(
+    0deg,
+    rgba(242, 142, 28, 1) 0%,
+    rgba(244, 164, 71, 1) 68%,
+    rgba(255, 239, 218, 1) 100%
+  );
   border: 1px solid grey;
   border-radius: 15px;
   margin: 0.5rem;

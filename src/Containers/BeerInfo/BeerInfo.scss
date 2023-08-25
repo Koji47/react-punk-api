@@ -5,7 +5,13 @@
   align-items: center;
   text-align: center;
   padding: 5rem 50px 5rem 50px;
-  background-color: #ecf87f;
+  background: rgb(242, 142, 28);
+  background: linear-gradient(
+    0deg,
+    rgba(242, 142, 28, 1) 0%,
+    rgba(244, 164, 71, 1) 68%,
+    rgba(255, 239, 218, 1) 100%
+  );
   margin: 1rem;
   border-radius: 30px;
 
