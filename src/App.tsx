@@ -30,8 +30,8 @@ function App() {
     getBeer();
   }, [searchInput]);
 
-  const beersFiltered = beers.filter((alcohol) => {
-    return alcohol.name.toLowerCase().includes(searchInput.toLowerCase());
+  const beersFiltered = beers.filter((beer) => {
+    return beer.name.toLowerCase().includes(searchInput.toLowerCase());
   });
 
   return (
