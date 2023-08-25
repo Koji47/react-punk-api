@@ -1,14 +1,15 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
-import userEvent from "@testing-library/user-event";
+import CardContainer from "./Containers/CardContainer/CardContainer";
+import Nav from "./Containers/NavBar/Nav";
 
-it("should render the form", () => {
-  // arrange
+it("search functionality works", async () => {
   render(<App />);
   // act
-  const nav = screen.getByRole("nav");
+  const searchInput = screen.getByRole("Search");
+  fireEvent.change(searchInput, { target: { value: "buzz" } });
 
   // assert
-
-  expect(nav).toBeInTheDocument();
+  expect(screen.getByText("buzz")).toBeDefined();
+  expect(searchInput).toHaveValue("buzz");
 });
