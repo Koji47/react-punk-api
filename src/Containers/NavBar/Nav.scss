@@ -1,5 +1,14 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #59981a;
+}
+
+h1 {
+  margin: 0px;
+  flex: 1;
+  text-align: center;
+  margin-left: 100px;
 }

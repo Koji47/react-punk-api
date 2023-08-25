@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 
 type NavProps = {
   onSearch: (searchInput: string) => void;
-  //   onFilter: (filter: string, value: boolean) => void;
   searchInput: string;
-
-  //   handleFilter: (filterInput: string) => void;
 };
 
 const Nav = ({ onSearch, searchInput }: NavProps) => {
@@ -20,14 +17,15 @@ const Nav = ({ onSearch, searchInput }: NavProps) => {
   return (
     <>
       <nav>
+        <Link to={"/"} className="Home">
+          Home
+        </Link>
+        <h1>Brewdog</h1>
         <SearchBox
           label="Search"
           handleInput={handleInput}
           input={searchInput}
         />
-        <Link to={"/"} className="Home">
-          Home
-        </Link>
       </nav>
     </>
   );

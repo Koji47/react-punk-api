@@ -1,0 +1,12 @@
+.search-bar {
+  max-width: 300px;
+
+  &__input {
+    padding: 0.2rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  &:focus {
+    border-color: #ecf87f;
+  }
+}
