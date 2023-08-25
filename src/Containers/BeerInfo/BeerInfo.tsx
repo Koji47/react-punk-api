@@ -19,7 +19,6 @@ const BeerInfo = ({ beer }: BeerInfoProps) => {
       <div className="info__content">
         <h1 className="info__content-beer">{moreInfo.name}</h1>
         <p>
-          {" "}
           <span className="info__content-title">Description: </span>
           {moreInfo.description}
         </p>
