@@ -4,6 +4,7 @@ import { Beer } from "./Data/Types";
 import "./App.scss";
 import Main from "./Containers/Main/Main";
 import Nav from "./Containers/NavBar/Nav";
+import BeerInfo from "./Containers/BeerInfo/BeerInfo";
 
 function App() {
   const [beers, setBeers] = useState<Beer[]>([]);
@@ -43,9 +44,23 @@ function App() {
     <HashRouter>
       <>
         <Nav onSearch={handleSearch} searchInput={searchInput} />
-        <Main beers={beersFiltered} />
         <Routes>
-          <Route></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <Main beers={beersFiltered} />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/beer/:beerId"
+            element={
+              <>
+                <BeerInfo beer={beers} />
+              </>
+            }
+          />
         </Routes>
       </>
     </HashRouter>

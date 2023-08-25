@@ -1,27 +1,55 @@
 .card {
   background-color: azure;
   border: 1px solid grey;
-  border-radius: 40px;
-  padding: 1rem;
-  margin: 1rem;
-  width: 100%;
-  height: 450px;
+  border-radius: 15px;
+  margin: 0.5rem;
+  width: 100px;
+  height: 250px;
   text-align: center;
-  overflow: hidden;
-  max-width: 300px;
+  max-width: 120px;
 
   &__h2 {
-    font-size: 18px;
+    font-size: 12px;
+    padding: 0.5rem;
   }
 }
 
 img {
   max-width: 100%;
   height: auto;
-  max-height: 200px;
+  max-height: 100px;
+}
+
+.card__description {
+  font-size: 10px;
+  height: 90px;
+  overflow: auto;
+  padding: 1rem;
+  padding-bottom: 1rem;
 }
 
 p {
-  font-size: 12px;
+  font-size: 10px;
   overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 1rem;
+    width: 100%;
+    height: 400px;
+    max-width: 300px;
+    border-radius: 40px;
+
+    &__h2 {
+      font-size: 12px;
+      padding: 0.5rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+  }
 }

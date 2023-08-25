@@ -1,4 +1,3 @@
-import "./Main.scss";
 import { Beer } from "../../Data/Types";
 import CardContainer from "../CardContainer/CardContainer";
 

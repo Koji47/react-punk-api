@@ -1,6 +1,7 @@
 import "./Nav.scss";
 import { ChangeEvent } from "react";
 import SearchBox from "../../Components/SearchBox/SearchBox";
+import { Link } from "react-router-dom";
 
 type NavProps = {
   onSearch: (searchInput: string) => void;
@@ -19,13 +20,14 @@ const Nav = ({ onSearch, searchInput }: NavProps) => {
   return (
     <>
       <nav>
-        <div>
-          <SearchBox
-            label="Search"
-            handleInput={handleInput}
-            input={searchInput}
-          />
-        </div>
+        <SearchBox
+          label="Search"
+          handleInput={handleInput}
+          input={searchInput}
+        />
+        <Link to={"/"} className="Home">
+          Home
+        </Link>
       </nav>
     </>
   );
