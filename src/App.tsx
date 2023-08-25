@@ -9,34 +9,26 @@ import BeerInfo from "./Containers/BeerInfo/BeerInfo";
 function App() {
   const [beers, setBeers] = useState<Beer[]>([]);
   const [searchInput, setSearchInput] = useState<string>("");
-  // const [filters, setFilters] = useState<{
-  //   highAlcohol: Boolean;
-  //   classicRange: Boolean;
-  //   highAcidity: Boolean;
-  // }>({
-  //   highAlcohol: false,
-  //   classicRange: false,
-  //   highAcidity: false,
-  // });
 
   const getBeer = async () => {
-    const response = await fetch(
-      "https://api.punkapi.com/v2/beers?page=2&per_page=80"
-    );
-    const data = await response.json();
-    setBeers(data);
+    const url = `https://api.punkapi.com/v2/beers?page=1&per_page=80`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setBeers(data);
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
   };
 
   const handleSearch = (input: string) => {
     setSearchInput(input);
   };
 
-  // const handleFilter = (filter: string, value: boolean) => {
-  //   const abvCondition = beer.p;
-  // };
   useEffect(() => {
     getBeer();
-  });
+  }, [searchInput]);
 
   const beersFiltered = beers.filter((alcohol) => {
     return alcohol.name.toLowerCase().includes(searchInput.toLowerCase());
